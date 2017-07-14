@@ -1,0 +1,86 @@
+<html>   
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script language = "JavaScript">
+    var time_id
+        function showTime(){
+            var today = new Date()
+            var timestr = "Now is "+today.getHours()+" hr "+today.getMinutes()+" min "+today.getSeconds()+" sec"
+            window.status = timestr
+            time_id = setTimeout("showTime()", 1000)
+        }
+        function stopTime(){
+            clearTimeout(time_id)
+        }
+
+        function openImg(){
+            open("totoro.jpg", "totoro~", "width=600, height=300, left=550, top=100, scrollbars=yes, resize=yes")
+        }
+
+    </script>
+</head>
+<style>
+    #head {
+        position : absolute;
+        left : 40;
+        top : -10;
+    }
+    #intro {
+        position : absolute;
+        left : 40;
+        top : 70;
+        background-color : beige;
+        border-color : cadetblue;
+        border-width:1;            
+    }
+    #content {
+        position : absolute;
+        left : 40;
+        top : 400;
+    }
+    #time {
+        position : absolute;
+        left : 40;
+        top : 600;
+    }
+</style>
+<body>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <div id="head">
+    <h1><font color="#8fbc8f"><b>Introducing Myself</b></font></h1>
+    </div>
+    <div id = "intro">
+    <h1><a href = "http://52.79.55.214/kakao.html">*******click to share in mobile KAKAO TALK!!******</a></h1>
+    <p><img src="tolstoy2.jpg" usemap="#ImageMap2"></p>
+    <map name = "ImageMap2">
+        <area shape="rect" coords="296,16,493,230" href="https://ko.wikipedia.org/wiki/%EB%A0%88%ED%94%84_%ED%86%A8%EC%8A%A4%ED%86%A0%EC%9D%B4">
+    </map>
+    </div>
+    <div id="content">
+    <p>
+        <font color = "#191970"><b>?¥Î¶Ñ : Î∞±ÏÑ†??/b></font>
+    </p>
+    <p>
+        <font color = "#191970"><b>?ôÎ≤à : 21400358</b></font>
+    </p>
+    <p>
+        <font color = "#191970"><b>?ÑÍ≥µ : ?ÑÏÇ∞?ÑÏûêÍ≥µÌïôÎ∂Ä</b></font>
+    </p>
+    <p>
+        <font color = "#191970"><b>Ï¢ãÏïÑ?òÎäî Í≤?: ?¨Ïãú??Î¨∏Ìïô, Ï≤†Ìïô, ?? ?¨Ìñâ, ?òÌïô, ?¨Î¶Ñ, Íµ∞Í≤ÉÏß?/b></font>
+    </p>
+    <p>
+        <font color = "#191970"><b>?´Ïñ¥?òÎäî Í≤?: Îπ? ?êÌÜµ..</b></font>
+    </p>
+    </div>
+    <form method = "post">
+        <p id="time">
+            <input type="button" value="clock start" name = "B1" onClick="showTime()">
+            <input type="button" value="clock stop" name = "B2" onClick="stopTime()">
+            <input type = "button" value = "here is totoro" name = "totoro" onClick="openImg()"> 
+
+        </p>
+    </form>
+</body>
+</html>
